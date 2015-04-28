@@ -9,7 +9,7 @@ package tb;
  *
  * @author flora fauna
  */
-public class TB {
+public class Input {
 
     // deklarasi variabel identitas ruangkelas
     String namaruang;

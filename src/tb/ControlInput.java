@@ -13,10 +13,10 @@ import java.util.Scanner;
 public class ControlInput {
       void InsertData(){
        int a;
-       TB [] tebe ; 
-       tebe = new TB [1]; 
+       Input [] tebe ; 
+       tebe = new Input [1]; 
        for (a=0;a<tebe.length;a++){
-       tebe [a] = new TB(); 
+       tebe [a] = new Input(); 
        Scanner in = new Scanner (System.in);
        
        // inputan identitas ruang kelas
@@ -328,11 +328,11 @@ public class ControlInput {
        }
       }
       void CetakData(){
-       TB [] tebe ; 
+       Input [] tebe ; 
        int a;
-       tebe = new TB [1]; 
+       tebe = new Input [1]; 
        for (a=0;a<tebe.length;a++){
-       tebe [a] = new TB(); 
+       tebe [a] = new Input(); 
        Scanner in = new Scanner (System.in);
        
        // Output identitas ruang kelas
