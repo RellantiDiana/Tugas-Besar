@@ -3,25 +3,28 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tb;
+package TB;
 
 /**
  *
  * @author flora fauna
  */
 public class Input {
-
+	
     // deklarasi variabel identitas ruangkelas
-    String namaruang;
-    String lokasiruang;
-    String fakultas;
+    private String namaruang;
+    private String lokasiruang;
+    private String fakultas;
     
     //deklarasi variabel kondisi ruangkelas
     int panjang;
     int lebar;
-    int Jumlahkursi;
+    int jumlahkursi;
     int jumlahpintu;
     int jumlahjendela;
+    int luas;
+    int rasio;
+  
     
     //deklarasi variabel jumlah kondisi dan posisi sarana
     int jumlahstopkontak;
@@ -38,25 +41,25 @@ public class Input {
     
     int jumlahkipasangin;
     String kondisikipasangin;
-    String posisikipasangin;
+    private String posisikipasangin;
     
     int jumlahAC;
     String kondisiAC;
     String posisiAC;
     
     String pilihSSID;
-    int bandwidth;
+    private int bandwidth;
     
     int jumlahCCTV;
     String kondisiCCTV;
     String posisiCCTV;
     
     //deklarasi variabel lingkungan ruangkelas
-    String kondisilantai;
-    String kondisidinding;
-    String kondisiatap;
-    String kondisipintu;
-    String kondisijendela;
+    private String kondisilantai;
+    private String kondisidinding;
+    private String kondisiatap;
+    private String kondisipintu;
+    private String kondisijendela;
     
     //deklarasi variabel kebersihan ruangkelas
     String inputsirkulasiudara;
@@ -65,48 +68,48 @@ public class Input {
     int suhu;
     
     //deklarasi variabel kenyamanan ruangkelas
-    String kebisingan;
-    String bau;
-    String kebocaran;
-    String kerusakan;
-    String keausan;
+    private String kebisingan;
+    private String bau;
+    private String kebocaran;
+    private String kerusakan;
+    private String keausan;
     
     //deklarasi variabel keamanan ruangkelas
-    String kekokohan;
-    String kuncipintudanjendela;
-    String bahaya;
+    private String kekokohan;
+    private String kuncipintudanjendela;
+    private String bahaya;
     
-    private double luas;
-    private double rasio;
-    private double bentuk;
-    
-    double hitungluas(){
-        luas=this.panjang*this.lebar;
-        return luas;
-    }
-    double hitungrasio(){
-        rasio=luas/Jumlahkursi;
-        if (rasio>=0.5){
-            System.out.println("Sesuai");
-        }
-        else {
-            System.out.println("Tidak sesuai");
-        }
-        return rasio;
-        
-    }
-    double hitungbentuk(){
-        bentuk=this.panjang*this.lebar;
-        if (panjang!=luas){
-            System.out.println("Sesuai");
-        }
-        else {
-            System.out.println("Tidak sesuai");
-        }
-        return luas;
-        
-        
-    }
+//    private double luas;
+//    private double rasio;
+//    private double bentuk;
+//    
+//    double hitungluas(){
+//        luas=this.panjang*this.lebar;
+//        return luas;
+//    }
+//    double hitungrasio(){
+//        rasio=luas/jumlahkursi;
+//        if (rasio>=0.5){
+//            System.out.println("Sesuai");
+//        }
+//        else {
+//            System.out.println("Tidak sesuai");
+//        }
+//        return rasio;
+//        
+//    }
+//    double hitungbentuk(){
+//        bentuk=this.panjang*this.lebar;
+//        if (panjang!=lebar){
+//            System.out.println("Sesuai");
+//        }
+//        else {
+//            System.out.println("Tidak sesuai");
+//        }
+//        return luas;
+//        
+//        
+//    }
 
     public String getNamaruang() {
         return namaruang;
@@ -149,11 +152,11 @@ public class Input {
     }
 
     public int getJumlahkursi() {
-        return Jumlahkursi;
+        return jumlahkursi;
     }
 
     public void setJumlahkursi(int Jumlahkursi) {
-        this.Jumlahkursi = Jumlahkursi;
+        this.jumlahkursi = Jumlahkursi;
     }
 
     public int getJumlahpintu() {
@@ -470,4 +473,3 @@ public class Input {
     
        
  }
-  
