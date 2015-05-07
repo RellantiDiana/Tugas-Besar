@@ -523,16 +523,6 @@ void InsertDataKenyamananRuangKelas(){  //inputan kenyamanan ruang kelas
 //       tebe[a].getKuncipintudanjendela();
 //       System.out.println("Masukkan bahaya:");
 //       tebe[a].getBahaya();
-//       
-//       
-//   
-//      
-//       
-//        
-//        
-//        
-//        
-//    
 //}
 //}
 }
