@@ -194,13 +194,12 @@ public void insert (){
         this.bahaya=in.next();
         
     @Override
-    public void cetak() {
-    System.out.println(":::::::::::::::::::::::::::::::::::::::::::::");
+    public void Cetak() {
             System.out.println("Nama ruang: " + getNamaruang());
             System.out.println("Lokasi ruang: " + getLokasiruang());
-            System.out.println("Fakultas: " + getNamafakultas());
-            System.out.println("Luas= " + luas);
-            System.out.println("Rasio luas= " + rasio);
-            System.out.println(":::::::::::::::::::::::::::::::::::::::::::::");
+            System.out.println("Fakultas: " + getFakultas());
+            System.out.println("Luas : " + luas);
+            System.out.println("Rasio luas : " + rasio);
+            
     }
    }
