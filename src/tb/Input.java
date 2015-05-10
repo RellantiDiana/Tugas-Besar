@@ -11,7 +11,7 @@ package tb;
  * @author putri
  */
 import java.util.Scanner;
-public class Input {
+public class Input extends RuangKelas {
  // deklarasi variabel identitas ruangkelas
     private String namaruang;
     private String lokasiruang;
@@ -192,5 +192,15 @@ public void insert (){
         this.kuncipintudanjendela=in.next();
         System.out.println("Masukkan bahaya :");
         this.bahaya=in.next();
+        
+    @Override
+    public void cetak() {
+    System.out.println(":::::::::::::::::::::::::::::::::::::::::::::");
+            System.out.println("Nama ruang: " + getNamaruang());
+            System.out.println("Lokasi ruang: " + getLokasiruang());
+            System.out.println("Fakultas: " + getNamafakultas());
+            System.out.println("Luas= " + luas);
+            System.out.println("Rasio luas= " + rasio);
+            System.out.println(":::::::::::::::::::::::::::::::::::::::::::::");
     }
    }
