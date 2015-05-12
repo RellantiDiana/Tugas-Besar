@@ -9,7 +9,7 @@ package TB;
  *
  * @author flora fauna
  */
-public class RuangKelas {
+public abstract class RuangKelas {
     // deklarasi variabel identitas ruangkelas
      private String namaruang;
      private String lokasiruang;
@@ -369,6 +369,7 @@ public class RuangKelas {
     public String getBahaya() {
         return bahaya;
     }
+public abstract void cetak ();    
 
 }
         
