@@ -11,72 +11,72 @@ package TB;
  */
 public class RuangKelas {
     // deklarasi variabel identitas ruangkelas
-     String namaruang;
-     String lokasiruang;
-     String fakultas;
+     private String namaruang;
+     private String lokasiruang;
+     private String fakultas;
     
     //deklarasi variabel kondisi ruangkelas
-    int panjang;
-    int lebar;
-    int jumlahkursi;
-    int jumlahpintu;
-    int jumlahjendela;
-    int luas;
-    int rasio;
+    private int panjang;
+    private int lebar;
+    private int jumlahkursi;
+    private int jumlahpintu;
+    private int jumlahjendela;
+    private int luas;
+    private int rasio;
   
     
     //deklarasi variabel jumlah kondisi dan posisi sarana
-    int jumlahstopkontak;
-    String kondisistopkontak;
-    String posisistopkontak;
+    private int jumlahstopkontak;
+    private String kondisistopkontak;
+    private String posisistopkontak;
     
-    int jumlahkabellcd;
-    String kondisikabellcd;
-    String posisikabellcd;
+    private int jumlahkabellcd;
+    private String kondisikabellcd;
+    private String posisikabellcd;
     
-    int jumlahlampu;
-    String kondisilampu;
-    String posisilampu;
+   private  int jumlahlampu;
+    private String kondisilampu;
+    private String posisilampu;
     
-    int jumlahkipasangin;
-    String kondisikipasangin;
-     String posisikipasangin;
+    private int jumlahkipasangin;
+    private String kondisikipasangin;
+    private String posisikipasangin;
     
-    int jumlahAC;
-    String kondisiAC;
-    String posisiAC;
+    private int jumlahAC;
+    private String kondisiAC;
+    private String posisiAC;
     
-    String pilihSSID;
-     int bandwidth;
+    private String pilihSSID;
+    private  int bandwidth;
     
-    int jumlahCCTV;
-    String kondisiCCTV;
-    String posisiCCTV;
+    private int jumlahCCTV;
+    private  String kondisiCCTV;
+    private String posisiCCTV;
     
     //deklarasi variabel lingkungan ruangkelas
-     String kondisilantai;
-     String kondisidinding;
-     String kondisiatap;
-     String kondisipintu;
-     String kondisijendela;
+     private String kondisilantai;
+     private String kondisidinding;
+     Sprivate tring kondisiatap;
+     private String kondisipintu;
+     private String kondisijendela;
     
     //deklarasi variabel kebersihan ruangkelas
-    String inputsirkulasiudara;
-    int pencahayaan;
-    int kelembapan;
-    int suhu;
+    private String inputsirkulasiudara;
+    private int pencahayaan;
+    private int kelembapan;
+    private int suhu;
     
     //deklarasi variabel kenyamanan ruangkelas
-     String kebisingan;
-     String bau;
-     String kebocoran;
-     String kerusakan;
-     String keausan;
+     private String kebisingan;
+     private String bau;
+     private String kebocoran;
+     private String kerusakan;
+     private String keausan;
     
     //deklarasi variabel keamanan ruangkelas
-     String kekokohan;
-     String kuncipintudanjendela;
-     String bahaya;
+     private String kekokohan;
+     private String kuncipintudanjendela;
+     private String bahaya;
     
     
     
