@@ -1,0 +1,7 @@
+interface Interfes {
+public int jumlahkursi ();
+public int jumlahpintu ();
+public int jumlahjendela ();
+public int jumlahlampu ();
+
+}
