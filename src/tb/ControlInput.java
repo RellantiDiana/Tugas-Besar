@@ -2,10 +2,11 @@
 package tb;
 
 import java.util.Scanner;
-public class ControlInput extends RuangKelas {
+public class ControlInput  {
       
+       //inputan keamanan ruang kelas
       double hitungluas(int panjang , int lebar, int luas){
-        luas = panjang*lebar;
+        luas=panjang*lebar;
         return luas;
     }
     
@@ -14,163 +15,182 @@ public class ControlInput extends RuangKelas {
         return rasio;
     }
     
-    double HitungBentukRuang(int panjang , int luas){
+    double HitungBentukRuang(int panjang , int luas, double HitungBentukRuang){
         if(panjang != luas){
             System.out.println("persegi panjang");
             System.out.println("SESUAI");
         }else{
             System.out.println("TIDAK SESUAI");
         }
-        double HitungBentukRuang=0;
         return HitungBentukRuang;
     }
     
-    double HitungRasioLuas(int rasio){
+    double HitungRasioLuas(int rasio, double HitungRasioLuas){
         if (rasio>=2){
             System.out.println("SESUAI");
         }else{
             System.out.println("TIDAK SESUAI");
         }
-        double HitungRasioLuas = 0;
+        
         return HitungRasioLuas;
     }
        
-       double Analisispintujendela(int jumlahpintu, int jumlahjendela){
+       double Analisispintu(int jumlahpintu, double Analisispintu){
            if (jumlahpintu>=2){
             System.out.println("Sesuai");
         }
         else {
             System.out.println("Tidak sesuai");
-        }    
+        } 
+               return Analisispintu;
+       }
+       
+       double Analisisjendela(int jumlahjendela, double AnalisisPintudanJendela){
         if (jumlahjendela>=1){
             System.out.println("Sesuai");
         }
         else {
             System.out.println("Tidak sesuai");
         }
-       double AnalisisPintudanJendela = 0;
         return AnalisisPintudanJendela;
        }
        
-       double Analisiskelistrikan(int jumlahstopkontak , String kondisistopkontak, String posisistopkontak ){
+       double Analisisstopkontak(int jumlahstopkontak, double Analisisstopkontak ){
             if (jumlahstopkontak>=4){
             System.out.println("Sesuai");
         }
         else {
             System.out.println("Tidak sesuai");
         }
+        return Analisisstopkontak;
+       }
+       
+       double Analisiskondisistopkontak(int jumlahstopkontak, String kondisistopkontak, double Analisiskondisistopkontak){
             if (jumlahstopkontak==4 &&kondisistopkontak.equals("baik")){
             System.out.println("Sesuai");
         }
         else {
             System.out.println("Tidak sesuai");
         }
+            return Analisiskondisistopkontak;
+       }
+       double Analisisposisistopkontak(String posisistopkontak, double Analisisposisistopkontak ){
             if (posisistopkontak.equals("pojok ruangan") && posisistopkontak.equals("Dekat dosen")){
             System.out.println("Sesuai");
         }
         else {
             System.out.println("Tidak sesuai");
         }
-        double Analisiskelistrikan=0;
-        return Analisiskelistrikan;
+        return Analisisposisistopkontak;
        }
        
-       double Analisislcd(int jumlahkabellcd, String kondisikabellcd , String posisikabellcd){
+       double Analisisjumlahkabellcd(int jumlahkabellcd, double Analisisjumlahkabellcd){
            if (jumlahkabellcd>=1){
             System.out.println("Sesuai");
         }
         else {
             System.out.println("Tidak sesuai");
         }
+           return Analisisjumlahkabellcd;
+       }
+       double Analisiskondisikabellcd(String kondisikabellcd, double Analisiskondisikabellcd){
            if (kondisikabellcd.equals("Berfungsi")){
             System.out.println("Sesuai");
         }
         else {
             System.out.println("Tidak sesuai");
         }
+           return  Analisiskondisikabellcd;
+       }
+       
+       double Analisisposisikabellcd(String posisikabellcd, double Analisisposisikabellcd){
            if (posisikabellcd.equals("Dekat dosen")){
             System.out.println("Sesuai");
         }
         else {
             System.out.println("Tidak sesuai");
         }
-        double Analisislcd=0;
-        return Analisislcd;
+        return Analisisposisikabellcd;
 
        }
-       double Analisislampu(int jumlahlampu ,String posisilampu){
+       double Analisisjumlahlampu(int jumlahlampu, double Analisisjumlahlampu ){
            if (jumlahlampu>=18 ){
             System.out.println("Sesuai");
         }
         else {
             System.out.println("Tidak sesuai");
         }
+           return Analisisjumlahlampu;
+       }
+       double Analisisposisilampu(String posisilampu, double Analisisposisilampu){
            if (posisilampu.equals("Atap ruangan")){
             System.out.println("Sesuai");
         }
         else {
             System.out.println("Tidak sesuai");
         }
-        double Analisislampu=0;
-        return Analisislampu;
+       
+        return Analisisposisilampu;
        }
-       double Analisiskipas(int jumlahkipasangin ,String kondisikipasangin){
+       
+       double Analisisjumlahkipas(int jumlahkipasangin, double Analisisjumlahkipas ){
             if (jumlahkipasangin>=2){
             System.out.println("Sesuai");
         }
         else {
             System.out.println("Tidak sesuai");
-        }
+        } 
+            return Analisisjumlahkipas;
+       }
+       double Analisiskondisikipasangin(int jumlahkipasangin, String kondisikipasangin, double Analisiskondisikipasangin){
             if (kondisikipasangin.equals("baik") && jumlahkipasangin==2){
             System.out.println("Sesuai");
         }
         else {
             System.out.println("Tidak sesuai");
         }
-        double Analisiskipas=0;
-        return Analisiskipas;
+        return Analisiskondisikipasangin;
        }
-       
-       double Analisisinternet(String pilihSSID ){
+       //internet
+       double Analisisinternet(String pilihSSID, double Analisisinternet ){
            if (pilihSSID.equals("UMM Hotspot")){
             System.out.println("Sesuai");
         }
         else {
             System.out.println("Tidak sesuai");
         }
+           return Analisisinternet;
+       }
+           double AnalisisLogininternet(String pilihSSID, double AnalisisLogininternet){
        if (pilihSSID.equals("Bisa login")){
             System.out.println("Sesuai");
         }
         else {
             System.out.println("Tidak sesuai");
         }
-        double Analisisinternet=0;
-        return Analisisinternet;
+        return AnalisisLogininternet ;
        }
-       double AnalisisCCTV(int jumlahCCTV , String posisiCCTV){
+       
+       double AnalisisjumlahCCTV(int jumlahCCTV, double AnalisisjumlahCCTV){
            if (jumlahCCTV==2){
             System.out.println("Sesuai");
         }
         else {
             System.out.println("Tidak sesuai");
         }
-           if (jumlahCCTV==2){
-            System.out.println("Sesuai");
+           return AnalisisjumlahCCTV;
         }
-        else {
-            System.out.println("Tidak sesuai");
-        }
+       double AnalisisposisiCCTV(String posisiCCTV, double AnalisisposisiCCTV){
            if (posisiCCTV.equals("Depan") && posisiCCTV.equals("Belakang")){
             System.out.println("Sesuai");
         }
         else {
             System.out.println("Tidak sesuai");
         }
-        double AnalisisCCTV=0;
-        return AnalisisCCTV;
+        return AnalisisposisiCCTV;
        }
        
-       double Analisiskebersihan(int b){
+       double Analisiskebersihan(int b, double Analsiskebersihan){
           
            if (b==1){
                System.out.println("Sesuai");
@@ -179,51 +199,49 @@ public class ControlInput extends RuangKelas {
                System.out.println("Tidak sesuai");
            
            }
-        double Analsiskebersihan=0;
         return Analsiskebersihan;
        }
-       double Analisissirkulasiudara(String inputsirkulasiudara){
+       
+       double Analisissirkulasiudara(String inputsirkulasiudara, double Analisissirkulasiudara){
         if (inputsirkulasiudara.equals("Lancar")){
             System.out.println("Sesuai");
         }
         else {
             System.out.println("Tidak sesuai");
         }
-        double Analisissirkulasiudara=0;
         return Analisissirkulasiudara;
        }
-       double Analisispencahayaan(int pencahayaan){
+       
+       double Analisispencahayaan(int pencahayaan, double Analisispencahayaan){
            if (pencahayaan>=250 && pencahayaan<=350){
             System.out.println("Sesuai");
         }
         else {
             System.out.println("Tidak sesuai");
         }
-       double Analisispencahayaan=0;
         return Analisispencahayaan;
        }
-       double Analisiskelembapan(int kelembapan){
+       double Analisiskelembapan(int kelembapan, double Analisiskelembapan){
             if (kelembapan>=70 && kelembapan<=80){
             System.out.println("Sesuai");
         }
         else {
             System.out.println("Tidak sesuai");
         }
-        double Analisiskelembapan=0;
         return Analisiskelembapan;
        }
-        double Analisissuhu(int suhu){
+       
+        double Analisissuhu(int suhu, double Analisissuhu){
         if (suhu>=25 && suhu<=35){
             System.out.println("Sesuai");
         }
         else {
             System.out.println("Tidak sesuai");
         }
-        double Analisissuhu=0;
         return Analisissuhu;
        }
         //inputan kenyamanan ruang kelas
-       double kebisingan (){
+       double kebisingan (double kebisingan){
        int c=0;
         if (c==1){
             System.out.println("TIDAK SESUAI");
@@ -231,11 +249,10 @@ public class ControlInput extends RuangKelas {
         if (c==2){
             System.out.println("SESUAI");
         }
-        double kebisingan=0;
         return kebisingan;
     }
 //       tebe[a].setKebisingan(in.next());
-       double bau(){
+       double bau(double bau){
        int d=0;
         if (d==1){
             System.out.println("TIDAK SESUAI");
@@ -243,11 +260,10 @@ public class ControlInput extends RuangKelas {
         if (d==2){
             System.out.println("SESUAI");
         }
-        double bau=0;
         return bau;
     }
 //       tebe[a].setBau(in.next());
-       double kebocoran(){
+       double kebocoran(double kebocoran){
          int e=0;
         if (e==1){
             System.out.println("TIDAK SESUAI");
@@ -255,11 +271,10 @@ public class ControlInput extends RuangKelas {
         if (e==2){
             System.out.println("SESUAI");
         }
-        double kebocoran=0;
         return kebocoran;
     }
 //       tebe[a].setKebocaran(in.next());
-       double kerusakan(){
+       double kerusakan(double Kerusakan){
        int f=0;
         if (f==1){
             System.out.println("TIDAK SESUAI");
@@ -267,12 +282,11 @@ public class ControlInput extends RuangKelas {
         if (f==2){
             System.out.println("SESUAI");
         }
-        double Kerusakan=0;
         return Kerusakan;
     }
        
 //       tebe[a].setKerusakan(in.next());
-       double Keausan(){
+       double Keausan(double Keausan){
         int g=0;
         if (g==1){
             System.out.println("TIDAK SESUAI");
@@ -280,11 +294,10 @@ public class ControlInput extends RuangKelas {
         if (g==2){
             System.out.println("SESUAI");
         }
-        double Keausan=0;
         return Keausan;
        }
        
-       double Kekokohan(){
+       double Kekokohan(double Kekokohan){
         int h=0;
         if (h==1){
             System.out.println("TIDAK SESUAI");
@@ -292,11 +305,10 @@ public class ControlInput extends RuangKelas {
         if (h==2){
             System.out.println("SESUAI");
         }
-        double Kekokohan=0;
         return Kekokohan;
     }
         
-    double KunciPintudanJendela(){
+    double KunciPintudanJendela(double KunciPintudanJendela){
         int d=0;
         if (d==1){
         System.out.println("TIDAK SESUAI");
@@ -304,11 +316,10 @@ public class ControlInput extends RuangKelas {
         if (d==2){
             System.out.println("SESUAI");
         }
-        double KunciPintudanJendela=0;
         return KunciPintudanJendela;
     }
         
-    double KeamananRuang(){
+    double KeamananRuang(double KeamananRuang){
         int e=0;
         if (e==1){
             System.out.println("TIDAK SESUAI");
@@ -316,11 +327,5 @@ public class ControlInput extends RuangKelas {
         if (e==2){
             System.out.println("SESUAI");
         }
-        double KeamananRuang=0;
         return KeamananRuang;
-    }
-      
-
-      
-      }
-
+    } }
