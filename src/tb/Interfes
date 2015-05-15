@@ -1,7 +1,8 @@
 interface Interfes {
-public int jumlahkursi ();
-public int jumlahpintu ();
-public int jumlahjendela ();
-public int jumlahlampu ();
-
+public String kebisingan ();
+public String bau();
+public String kebocoran();
+public String kerusakan();
+public String Keausan();
+public String Kekokohan();
 }
