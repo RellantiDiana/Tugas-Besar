@@ -2,7 +2,7 @@
 package tb;
 
 import java.util.Scanner;
-public class ControlInput  {
+public class ControlInput extends RuangKelas implements Interfes  {
       
        //inputan keamanan ruang kelas
       double hitungluas(int panjang , int lebar, int luas){
@@ -327,5 +327,83 @@ public class ControlInput  {
         if (e==2){
             System.out.println("SESUAI");
         }
-        return KeamananRuang;
+        return KeamananRuang; 
+        
+      @Override
+      //kenyamanan ruang kelas
+      public String Kebisingan(String Kebisingan){
+      int c==0
+      if(c==1){
+            System.out.println("TIDAK SESUAI");
+      }
+      if(c==2){
+            System.out.println("SESUAI");
+      }}
+      
+      public String Bau(String Bau ){
+      int d==0
+      if (d==1){
+            System.out.println("TIDAK SESUAI");
+      }
+      if (d==2){
+            System.out.println("SESUAI");
+      }}
+      
+      public String Kebocoran(String Kebocoran){
+      int e==0
+      if (e==1){
+            System.out.println("TIDAK SESUAI");
+      }
+      if (e==2){
+            System.out.println("SESUAI");
+      }}
+      
+      public String Kerusakan(String Kerusakan){
+      int f==0
+      if (f==1){
+            System.out.println("TIDAK SESUAI");
+      }
+      if (f==2){
+            System.out.println("SESUAI");
+      }}
+      
+      public String Keausan(String Keausan){
+      int g==0
+      if (g==1){
+            System.out.println("TIDAK SESUAI");
+      }
+      if (g==2){
+            System.out.println("SESUAI");
+      }}
+
+      public String Kekokohan(String Kekokohan){
+      int h==0
+      if (h==1){
+            System.out.println("TIDAK SESUAI");
+      }
+      if (h==2){
+            System.out.println("SESUAI");
+      }}
+      
+      public String KunciPintudanJendela(String KunciPintudanJendela){
+      int d==0
+      if (d==1){
+            System.out.println("TIDAK SESUAI");
+      }
+      if (d==2){
+            System.out.println("SESUAI");
+      }}
+
+      public String KeamananRuang(String KeamananRuang){
+      int e==0
+      if (e==1){
+      System.out.println("TIDAK SESUAI");
+      }
+      if (e==2){
+      System.out.println("SESUAI");
+      }
+
+
+
+      }
     } }
