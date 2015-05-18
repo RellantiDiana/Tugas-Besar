@@ -309,22 +309,22 @@ public class ControlInput extends RuangKelas implements Interfes  {
     }
         
     double KunciPintudanJendela(double KunciPintudanJendela){
-        int d=0;
-        if (d==1){
+        int i=0;
+        if (i==1){
         System.out.println("TIDAK SESUAI");
         }
-        if (d==2){
+        if (i==2){
             System.out.println("SESUAI");
         }
         return KunciPintudanJendela;
     }
         
     double KeamananRuang(double KeamananRuang){
-        int e=0;
-        if (e==1){
+        int j=0;
+        if (j==1){
             System.out.println("TIDAK SESUAI");
         }
-        if (e==2){
+        if (j==2){
             System.out.println("SESUAI");
         }
         return KeamananRuang; 
@@ -386,20 +386,20 @@ public class ControlInput extends RuangKelas implements Interfes  {
       }}
       
       public String KunciPintudanJendela(String KunciPintudanJendela){
-      int d==0
-      if (d==1){
+      int i==0
+      if (i==1){
             System.out.println("TIDAK SESUAI");
       }
-      if (d==2){
+      if (i==2){
             System.out.println("SESUAI");
       }}
 
       public String KeamananRuang(String KeamananRuang){
-      int e==0
-      if (e==1){
+      int j==0
+      if (j==1){
       System.out.println("TIDAK SESUAI");
       }
-      if (e==2){
+      if (j==2){
       System.out.println("SESUAI");
       }
 
