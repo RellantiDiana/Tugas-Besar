@@ -331,7 +331,7 @@ public class ControlInput extends RuangKelas implements Interfes  {
         
       @Override
       //kenyamanan ruang kelas
-      public String Kebisingan(String Kebisingan){
+      public String Kebisingan(){
       int c==0
       if(c==1){
             System.out.println("TIDAK SESUAI");
@@ -340,7 +340,7 @@ public class ControlInput extends RuangKelas implements Interfes  {
             System.out.println("SESUAI");
       }}
       
-      public String Bau(String Bau ){
+      public String Bau(){
       int d==0
       if (d==1){
             System.out.println("TIDAK SESUAI");
@@ -349,7 +349,7 @@ public class ControlInput extends RuangKelas implements Interfes  {
             System.out.println("SESUAI");
       }}
       
-      public String Kebocoran(String Kebocoran){
+      public String Kebocoran(){
       int e==0
       if (e==1){
             System.out.println("TIDAK SESUAI");
@@ -358,7 +358,7 @@ public class ControlInput extends RuangKelas implements Interfes  {
             System.out.println("SESUAI");
       }}
       
-      public String Kerusakan(String Kerusakan){
+      public String Kerusakan(){
       int f==0
       if (f==1){
             System.out.println("TIDAK SESUAI");
@@ -367,7 +367,7 @@ public class ControlInput extends RuangKelas implements Interfes  {
             System.out.println("SESUAI");
       }}
       
-      public String Keausan(String Keausan){
+      public String Keausan(){
       int g==0
       if (g==1){
             System.out.println("TIDAK SESUAI");
@@ -376,7 +376,7 @@ public class ControlInput extends RuangKelas implements Interfes  {
             System.out.println("SESUAI");
       }}
 
-      public String Kekokohan(String Kekokohan){
+      public String Kekokohan(){
       int h==0
       if (h==1){
             System.out.println("TIDAK SESUAI");
@@ -385,7 +385,7 @@ public class ControlInput extends RuangKelas implements Interfes  {
             System.out.println("SESUAI");
       }}
       
-      public String KunciPintudanJendela(String KunciPintudanJendela){
+      public String KunciPintudanJendela(){
       int i==0
       if (i==1){
             System.out.println("TIDAK SESUAI");
@@ -394,7 +394,7 @@ public class ControlInput extends RuangKelas implements Interfes  {
             System.out.println("SESUAI");
       }}
 
-      public String KeamananRuang(String KeamananRuang){
+      public String KeamananRuang(){
       int j==0
       if (j==1){
       System.out.println("TIDAK SESUAI");
@@ -402,8 +402,6 @@ public class ControlInput extends RuangKelas implements Interfes  {
       if (j==2){
       System.out.println("SESUAI");
       }
-
-
 
       }
     } }
