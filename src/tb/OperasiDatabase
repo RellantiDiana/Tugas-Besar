@@ -25,3 +25,12 @@ public class OperasiDatabase {
         private final String selectkenyamanan_ruangkelas  = "SELECT bau,kebocoran,kerusakan,keausan FROM kenyamanan_ruangkelas WHERE kenyamanan_ruangkelas LIKE kebisingan";
         private final String selectkeamanan_ruangkelas = "SELECT kuncipintudanjendela,bahaya FROM keamanan_ruangkelas WHERE keamanan_ruangkelas LIKE kekokohan";
         
+	private final String deleteidentitas_ruangkelas = "DELETE lokasiruang,fakultas FROM identitas_ruangkelas WHERE identitas_ruangkelas LIKE namaruang";
+        private final String deletekondisi_ruangkelas = "DELETE lebar,jumlahkursi,jumlahpintu,jumlahjendela,rasio FROM kondisi_ruangkelas WHERE kondisi_ruangkelas LIKE panjang";
+        private final String deletejumlah_kondisi_dan_posisisarana = "DELETE kondisistopkontak,posisistopkontak,jumlahkabellcd,kondisikabellcd,posisikabellcd,jumlahlampu,kondisilampu,posisilampu,jumlahkipasangin,kondisikipasangin,posisikipasangin,jumlahAC,kondisiAC,posisiAC,pilihSSID,bandwidth,jumlahCCTV,kondisiCCTV,posisiCCTV) VALUES (jumlahstopkontak,kondisistopkontak,posisistopkontak,jumlahkabellcd,kondisikabellcd,posisikabellcd,jumlahlampu,kondisilampu,posisilampu,jumlahkipasangin,kondisikipasangin,posisikipasangin,jumlahAC,kondisiAC,posisiAC,pilihSSID,bandwidth,jumlahCCTV,kondisiCCTV,posisiCCTV FROM jumlah_kondisi_dan_posisisarana WHERE jumlah_kondisi_dan_posisisarana LIKE jumlahstopkontak";
+	private final String deletelingkungan_ruangkelas = "DELETE kondisidinding,kondisiatap,kondisipintu,kondisijendela FROM lingkungan_ruangkelas WHERE lingkungan_ruangkelas LIKE kondisilantai";
+        private final String deletekebersihan_ruangkelas = "DELETE pencahayaan,kelembapan,suhu FROM kebersihan_ruangkelas WHERE kebersihan_ruangkelas LIKE inputsirkulasiudara";
+        private final String deletekenyamanan_ruangkelas  = "DELETE bau,kebocoran,kerusakan,keausan FROM kenyamanan_ruangkelas WHERE kenyamanan_ruangkelas LIKE kebisingan";
+        private final String deletekeamanan_ruangkelas = "DELETE kuncipintudanjendela,bahaya FROM keamanan_ruangkelas WHERE keamanan_ruangkelas LIKE kekokohan";
+       
+	}
