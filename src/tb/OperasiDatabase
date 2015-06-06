@@ -1,0 +1,19 @@
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class OperasiDatabase {
+	
+	private Connection connection;
+	private final String insertidentitas_ruangkelas = "INSERT INTO identitas_ruangkelas (namaruang,lokasiruang,fakultas,prodi) VALUES (namaruang,lokasiruang,fakultas,prodi);";
+        private final String insertkondisi_ruangkelas = "INSERT INTO kondisi_ruangkelas (panjang,lebar,jumlahkursi,jumlahpintu,jumlahjendela,rasio) VALUES (panjang,lebar,jumlahkursi,jumlahpintu,jumlahjendela,rasio);";
+        private final String insertjumlah_kondisi_dan_posisisarana = "INSERT INTO jumlah_kondisi_dan_posisisarana (jumlahstopkontak,kondisistopkontak,posisistopkontak,jumlahkabellcd,kondisikabellcd,posisikabellcd,jumlahlampu,kondisilampu,posisilampu,jumlahkipasangin,kondisikipasangin,posisikipasangin,jumlahAC,kondisiAC,posisiAC,pilihSSID,bandwidth,jumlahCCTV,kondisiCCTV,posisiCCTV) VALUES (jumlahstopkontak,kondisistopkontak,posisistopkontak,jumlahkabellcd,kondisikabellcd,posisikabellcd,jumlahlampu,kondisilampu,posisilampu,jumlahkipasangin,kondisikipasangin,posisikipasangin,jumlahAC,kondisiAC,posisiAC,pilihSSID,bandwidth,jumlahCCTV,kondisiCCTV,posisiCCTV);";
+	private final String insertlingkungan_ruangkelas = "INSERT INTO lingkungan_ruangkelas (kondisilantai,kondisidinding,kondisiatap,kondisipintu,kondisijendela) VALUES (kondisilantai,kondisidinding,kondisiatap,kondisipintu,kondisijendela);";
+        private final String insertkebersihan_ruangkelas = "INSERT INTO kebersihan_ruangkelas (inputsirkulasiudara,pencahayaan,kelembapan,suhu) VALUES (inputsirkulasiudara,pencahayaan,kelembapan,suhu);";
+        private final String insertkenyamanan_ruangkelas = "INSERT INTO kenyamanan_ruangkelas (kebisingan,bau,kebocoran,kerusakan,keausan) VALUES kebisingan,bau,kebocoran,kerusakan,keausan);";
+        private final String insertkeamanan_ruangkelas = "INSERT INTO keamanan_ruangkelas (kekokohan,kuncipintudanjendela,bahaya) VALUES (kekokohan,kuncipintudanjendela,bahaya);";
+        
