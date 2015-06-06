@@ -1,0 +1,25 @@
+import java.sql.Connection;
+import java.sql.SQLException;
+import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+
+public class Database2 {
+	
+	static Connection con;
+	
+	//method koneksi database
+	public static Connection connection(){
+		if(con == null){
+			MysqlDataSource data = new MysqlDataSource();
+			data.setDatabaseName("sistem inventaris kelas");
+			data.setUser("user");
+			data.setPassword("123");
+			try{
+				con = data.getConnection();
+			}catch(SQLException ex){
+				ex.printStackTrace();
+			}
+		}
+		return con;
+	}
+}
+    
