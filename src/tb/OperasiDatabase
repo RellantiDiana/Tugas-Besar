@@ -17,3 +17,11 @@ public class OperasiDatabase {
         private final String insertkenyamanan_ruangkelas = "INSERT INTO kenyamanan_ruangkelas (kebisingan,bau,kebocoran,kerusakan,keausan) VALUES kebisingan,bau,kebocoran,kerusakan,keausan);";
         private final String insertkeamanan_ruangkelas = "INSERT INTO keamanan_ruangkelas (kekokohan,kuncipintudanjendela,bahaya) VALUES (kekokohan,kuncipintudanjendela,bahaya);";
         
+	private final String selectidentitas_ruangkelas = "SELECT lokasiruang,fakultas FROM identitas_ruangkelas WHERE identitas_ruangkelas LIKE namaruang";
+        private final String selectkondisi_ruangkelas = "SELECT lebar,jumlahkursi,jumlahpintu,jumlahjendela,rasio FROM kondisi_ruangkelas WHERE kondisi_ruangkelas LIKE panjang";
+        private final String selectjumlah_kondisi_dan_posisisarana = "SELECT kondisistopkontak,posisistopkontak,jumlahkabellcd,kondisikabellcd,posisikabellcd,jumlahlampu,kondisilampu,posisilampu,jumlahkipasangin,kondisikipasangin,posisikipasangin,jumlahAC,kondisiAC,posisiAC,pilihSSID,bandwidth,jumlahCCTV,kondisiCCTV,posisiCCTV) VALUES (jumlahstopkontak,kondisistopkontak,posisistopkontak,jumlahkabellcd,kondisikabellcd,posisikabellcd,jumlahlampu,kondisilampu,posisilampu,jumlahkipasangin,kondisikipasangin,posisikipasangin,jumlahAC,kondisiAC,posisiAC,pilihSSID,bandwidth,jumlahCCTV,kondisiCCTV,posisiCCTV FROM jumlah_kondisi_dan_posisisarana WHERE jumlah_kondisi_dan_posisisarana LIKE jumlahstopkontak";
+	private final String selectlingkungan_ruangkelas = "SELECT kondisidinding,kondisiatap,kondisipintu,kondisijendela FROM lingkungan_ruangkelas WHERE lingkungan_ruangkelas LIKE kondisilantai";
+        private final String selectkebersihan_ruangkelas = "SELECT pencahayaan,kelembapan,suhu FROM kebersihan_ruangkelas WHERE kebersihan_ruangkelas LIKE inputsirkulasiudara";
+        private final String selectkenyamanan_ruangkelas  = "SELECT bau,kebocoran,kerusakan,keausan FROM kenyamanan_ruangkelas WHERE kenyamanan_ruangkelas LIKE kebisingan";
+        private final String selectkeamanan_ruangkelas = "SELECT kuncipintudanjendela,bahaya FROM keamanan_ruangkelas WHERE keamanan_ruangkelas LIKE kekokohan";
+        
