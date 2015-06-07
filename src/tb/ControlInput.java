@@ -2,62 +2,74 @@
 package TB;
 
 import java.util.Scanner;
-public class ControlInput extends RuangKelas implements Interfes {
-//inputan keamanan ruang kelas
+abstract public class ControlInput extends RuangKelas implements Interfes {
+
+    public ControlInput(String namaruang, String lokasiruang, String fakultas, String prodi,int panjang, int lebar, int jumlahkursi, int jumlahpintu, int jumlahjendela, int luas, int rasio, int bentuk, int jumlahstopkontak, String kondisistopkontak, String posisistopkontak, int jumlahkabellcd, String kondisikabellcd, String posisikabellcd, int jumlahlampu, String kondisilampu, String posisilampu, int jumlahkipasangin, String kondisikipasangin, String posisikipasangin, int jumlahAC, String kondisiAC, String posisiAC, String pilihSSID, int bandwidth, int jumlahCCTV, String kondisiCCTV, String posisiCCTV, String kondisilantai, String kondisidinding, String kondisiatap, String kondisipintu, String kondisijendela, String sirkulasiudara, int pencahayaan, int kelembapan, int suhu, String kebisingan, String bau, String kebocoran, String kerusakan, String keausan, String kekokohan, String kuncipintudanjendela, String bahaya) {
+        super(namaruang, lokasiruang, fakultas, panjang, lebar, jumlahkursi, jumlahpintu, jumlahjendela, luas, rasio, bentuk, jumlahstopkontak, kondisistopkontak, posisistopkontak, jumlahkabellcd, kondisikabellcd, posisikabellcd, jumlahlampu, kondisilampu, posisilampu, jumlahkipasangin, kondisikipasangin, posisikipasangin, jumlahAC, kondisiAC, posisiAC, pilihSSID, bandwidth, jumlahCCTV, kondisiCCTV, posisiCCTV, kondisilantai, kondisidinding, kondisiatap, kondisipintu, kondisijendela, sirkulasiudara, pencahayaan, kelembapan, suhu, kebisingan, bau, kebocoran, kerusakan, keausan, kekokohan, kuncipintudanjendela, bahaya);
+    }
+
+    
 double hitungluas(int panjang , int lebar, int luas){
 luas=panjang*lebar;
 return luas;
 }
+
 double hitungrasio(int rasio, int luas , int jumlahkursi){
 rasio= luas/jumlahkursi;
 return rasio;
 }
-double HitungBentukRuang(int panjang , int luas, double HitungBentukRuang){
+
+double hitungbentukruang(int panjang , int luas, double hitungbentukruang){
 if(panjang != luas){
 System.out.println("persegi panjang");
 System.out.println("SESUAI");
 }else{
 System.out.println("TIDAK SESUAI");
 }
-return HitungBentukRuang;
+return hitungbentukruang;
 }
-double HitungRasioLuas(int rasio, double HitungRasioLuas){
+
+double hitungrasioluas(int rasio, double hitungrasioLuas){
 if (rasio>=2){
 System.out.println("SESUAI");
 }else{
 System.out.println("TIDAK SESUAI");
 }
-return HitungRasioLuas;
+return hitungrasioLuas;
 }
-double Analisispintu(int jumlahpintu, double Analisispintu){
+
+double Analisisjumlahpintu(int jumlahpintu, double Analisisjumlahpintu){
 if (jumlahpintu>=2){
 System.out.println("Sesuai");
 }
 else {
 System.out.println("Tidak sesuai");
 }
-return Analisispintu;
+return Analisisjumlahpintu;
 }
-double Analisisjendela(int jumlahjendela, double AnalisisPintudanJendela){
+
+double Analisisjumlahjendela(int jumlahjendela, double Analisisjumlahjendela){
 if (jumlahjendela>=1){
 System.out.println("Sesuai");
 }
 else {
 System.out.println("Tidak sesuai");
 }
-return AnalisisPintudanJendela;
+return Analisisjumlahjendela;
 }
-double Analisisstopkontak(int jumlahstopkontak, double Analisisstopkontak ){
+
+double Analisisjumlahstopkontak(int jumlahstopkontak, double Analisisjumlahstopkontak ){
 if (jumlahstopkontak>=4){
 System.out.println("Sesuai");
 }
 else {
 System.out.println("Tidak sesuai");
 }
-return Analisisstopkontak;
+return Analisisjumlahstopkontak;
 }
+
 double Analisiskondisistopkontak(int jumlahstopkontak, String kondisistopkontak, double Analisiskondisistopkontak){
-if (jumlahstopkontak==4 &&kondisistopkontak.equals("baik")){
+if (jumlahstopkontak==4 &&kondisistopkontak.equals("Baik")){
 System.out.println("Sesuai");
 }
 else {
@@ -65,8 +77,9 @@ System.out.println("Tidak sesuai");
 }
 return Analisiskondisistopkontak;
 }
+
 double Analisisposisistopkontak(String posisistopkontak, double Analisisposisistopkontak ){
-if (posisistopkontak.equals("pojok ruangan") && posisistopkontak.equals("Dekat dosen")){
+if (posisistopkontak.equals("Pojok ruangan") && posisistopkontak.equals("Dekat dosen")){
 System.out.println("Sesuai");
 }
 else {
@@ -74,6 +87,7 @@ System.out.println("Tidak sesuai");
 }
 return Analisisposisistopkontak;
 }
+
 double Analisisjumlahkabellcd(int jumlahkabellcd, double Analisisjumlahkabellcd){
 if (jumlahkabellcd>=1){
 System.out.println("Sesuai");
@@ -83,6 +97,7 @@ System.out.println("Tidak sesuai");
 }
 return Analisisjumlahkabellcd;
 }
+
 double Analisiskondisikabellcd(String kondisikabellcd, double Analisiskondisikabellcd){
 if (kondisikabellcd.equals("Berfungsi")){
 System.out.println("Sesuai");
@@ -92,6 +107,7 @@ System.out.println("Tidak sesuai");
 }
 return Analisiskondisikabellcd;
 }
+
 double Analisisposisikabellcd(String posisikabellcd, double Analisisposisikabellcd){
 if (posisikabellcd.equals("Dekat dosen")){
 System.out.println("Sesuai");
@@ -101,6 +117,7 @@ System.out.println("Tidak sesuai");
 }
 return Analisisposisikabellcd;
 }
+
 double Analisisjumlahlampu(int jumlahlampu, double Analisisjumlahlampu ){
 if (jumlahlampu>=18 ){
 System.out.println("Sesuai");
@@ -110,6 +127,17 @@ System.out.println("Tidak sesuai");
 }
 return Analisisjumlahlampu;
 }
+
+double Analisiskondisilampu(String kondisilampu, double Analisiskondisilampu){
+if (kondisilampu.equals("Baik")){
+System.out.println("Sesuai");
+}
+else {
+System.out.println("Tidak sesuai");
+}
+return Analisiskondisilampu;
+}
+
 double Analisisposisilampu(String posisilampu, double Analisisposisilampu){
 if (posisilampu.equals("Atap ruangan")){
 System.out.println("Sesuai");
@@ -119,17 +147,18 @@ System.out.println("Tidak sesuai");
 }
 return Analisisposisilampu;
 }
-double Analisisjumlahkipas(int jumlahkipasangin, double Analisisjumlahkipas ){
+
+double Analisisjumlahkipasangin(int jumlahkipasangin, double Analisisjumlahkipasangin ){
 if (jumlahkipasangin>=2){
 System.out.println("Sesuai");
 }
 else {
 System.out.println("Tidak sesuai");
 }
-return Analisisjumlahkipas;
+return Analisisjumlahkipasangin;
 }
 double Analisiskondisikipasangin(int jumlahkipasangin, String kondisikipasangin, double Analisiskondisikipasangin){
-if (kondisikipasangin.equals("baik") && jumlahkipasangin==2){
+if (kondisikipasangin.equals("Baik") && jumlahkipasangin==2){
 System.out.println("Sesuai");
 }
 else {
@@ -137,6 +166,47 @@ System.out.println("Tidak sesuai");
 }
 return Analisiskondisikipasangin;
 }
+
+double Analisisposisikipasangin(String posisikipasangin, double Analisisposisikipasangin){
+if (posisilampu.equals("Atap ruangan")){
+System.out.println("Sesuai");
+}
+else {
+System.out.println("Tidak sesuai");
+}
+return Analisisposisikipasangin;
+}
+
+double AnalisisjumlahAC(int jumlahAC,double AnalisisjumlahAC ){
+if (jumlahAC>=1){
+System.out.println("Sesuai");
+}
+else {
+System.out.println("Tidak sesuai");
+}
+return AnalisisjumlahAC;
+}
+
+double AnalisiskondisiAC(int jumlahAC, String kondisiAC, double AnalisiskondisiAC){
+if (kondisiAC.equals("Baik") && jumlahAC==2){
+System.out.println("Sesuai");
+}
+else {
+System.out.println("Tidak sesuai");
+}
+return AnalisiskondisiAC;
+}
+
+double AnalisisposisiAC(String posisiAC, double AnalisisposisiAC){
+if (posisilampu.equals("Belakang") && posisilampu.equals("Samping")){
+System.out.println("Sesuai");
+}
+else {
+System.out.println("Tidak sesuai");
+}
+return AnalisisposisiAC;
+}
+
 //internet
 double Analisisinternet(String pilihSSID, double Analisisinternet ){
 if (pilihSSID.equals("UMM Hotspot")){
@@ -147,15 +217,17 @@ System.out.println("Tidak sesuai");
 }
 return Analisisinternet;
 }
-double AnalisisLogininternet(String pilihSSID, double AnalisisLogininternet){
+
+double Analisislogininternet(String pilihSSID, double Analisislogininternet){
 if (pilihSSID.equals("Bisa login")){
 System.out.println("Sesuai");
 }
 else {
 System.out.println("Tidak sesuai");
 }
-return AnalisisLogininternet ;
+return Analisislogininternet ;
 }
+
 double AnalisisjumlahCCTV(int jumlahCCTV, double AnalisisjumlahCCTV){
 if (jumlahCCTV==2){
 System.out.println("Sesuai");
@@ -165,6 +237,17 @@ System.out.println("Tidak sesuai");
 }
 return AnalisisjumlahCCTV;
 }
+
+double AnalisiskondisiCCTV(String kondisiCCTV, double AnalisiskondisiCCTV){
+if (kondisiCCTV.equals("Baik")){
+System.out.println("Sesuai");
+}
+else {
+System.out.println("Tidak sesuai");
+}
+return AnalisiskondisiCCTV;
+}
+
 double AnalisisposisiCCTV(String posisiCCTV, double AnalisisposisiCCTV){
 if (posisiCCTV.equals("Depan") && posisiCCTV.equals("Belakang")){
 System.out.println("Sesuai");
@@ -174,6 +257,7 @@ System.out.println("Tidak sesuai");
 }
 return AnalisisposisiCCTV;
 }
+
 double Analisiskebersihan(int b, double Analsiskebersihan){
 if (b==1){
 System.out.println("Sesuai");
@@ -183,8 +267,9 @@ System.out.println("Tidak sesuai");
 }
 return Analsiskebersihan;
 }
-double Analisissirkulasiudara(String inputsirkulasiudara, double Analisissirkulasiudara){
-if (inputsirkulasiudara.equals("Lancar")){
+
+double Analisissirkulasiudara(String sirkulasiudara, double Analisissirkulasiudara){
+if (sirkulasiudara.equals("Lancar")){
 System.out.println("Sesuai");
 }
 else {
@@ -192,6 +277,7 @@ System.out.println("Tidak sesuai");
 }
 return Analisissirkulasiudara;
 }
+
 double Analisispencahayaan(int pencahayaan, double Analisispencahayaan){
 if (pencahayaan>=250 && pencahayaan<=350){
 System.out.println("Sesuai");
@@ -201,6 +287,7 @@ System.out.println("Tidak sesuai");
 }
 return Analisispencahayaan;
 }
+
 double Analisiskelembapan(int kelembapan, double Analisiskelembapan){
 if (kelembapan>=70 && kelembapan<=80){
 System.out.println("Sesuai");
@@ -210,6 +297,7 @@ System.out.println("Tidak sesuai");
 }
 return Analisiskelembapan;
 }
+
 double Analisissuhu(int suhu, double Analisissuhu){
 if (suhu>=25 && suhu<=35){
 System.out.println("Sesuai");
@@ -219,96 +307,98 @@ System.out.println("Tidak sesuai");
 }
 return Analisissuhu;
 }
+
 //inputan kenyamanan ruang kelas
-double kebisingan (double kebisingan){
+double Analisiskebisingan (double Analisiskebisingan){
 int c=0;
 if (c==1){
-System.out.println("TIDAK SESUAI");
+System.out.println("Tidak Sesuai");
 }
 if (c==2){
-System.out.println("SESUAI");
+System.out.println("Sesuai");
 }
-return kebisingan;
+return Analisiskebisingan;
 }
-// tebe[a].setKebisingan(in.next());
-double bau(double bau){
+
+
+double Analisisbau(double Analisisbau){
 int d=0;
 if (d==1){
-System.out.println("TIDAK SESUAI");
+System.out.println("Tidak Sesuai");
 }
 if (d==2){
-System.out.println("SESUAI");
+System.out.println("Sesuai");
 }
-return bau;
+return Analisisbau;
 }
-// tebe[a].setBau(in.next());
-double kebocoran(double kebocoran){
+
+double Analisiskebocoran(double Analisiskebocoran){
 int e=0;
 if (e==1){
-System.out.println("TIDAK SESUAI");
+System.out.println("Tidak Sesuai");
 }
 if (e==2){
-System.out.println("SESUAI");
+System.out.println("Sesuai");
 }
-return kebocoran;
+return Analisiskebocoran;
 }
-// tebe[a].setKebocaran(in.next());
-double kerusakan(double Kerusakan){
+
+double Analisiskerusakan(double Analisiskerusakan){
 int f=0;
 if (f==1){
-System.out.println("TIDAK SESUAI");
+System.out.println("Tidak Sesuai");
 }
 if (f==2){
-System.out.println("SESUAI");
+System.out.println("Sesuai");
 }
-return Kerusakan;
+return Analisiskerusakan;
 }
-// tebe[a].setKerusakan(in.next());
-double Keausan(double Keausan){
+
+double Analisiskeausan(double Analisiskeausan){
 int g=0;
 if (g==1){
-System.out.println("TIDAK SESUAI");
+System.out.println("Tidak Sesuai");
 }
 if (g==2){
-System.out.println("SESUAI");
+System.out.println("Sesuai");
 }
-return Keausan;
+return Analisiskeausan;
 }
+
 //keamanan
-double Kekokohan(double Kekokohan){
+double Analisiskekokohan(double Analisiskekokohan){
 int h=0;
 if (h==1){
-System.out.println("TIDAK SESUAI");
+System.out.println("Tidak Sesuai");
 }
 if (h==2){
-System.out.println("SESUAI");
+System.out.println("Sesuai");
 }
-return Kekokohan;
+return Analisiskekokohan;
 }
-double KunciPintudanJendela(double KunciPintudanJendela){
+double Analisiskuncipintudanjendela(double Analisiskuncipintudanjendela){
 int i=0;
 if (i==1){
-System.out.println("TIDAK SESUAI");
+System.out.println("Tidak Sesuai");
 }
 if (i==2){
-System.out.println("SESUAI");
+System.out.println("Sesuai");
 }
-return KunciPintudanJendela;
+return Analisiskuncipintudanjendela;
 }
-String KemananRuang(double KeamananRuang){
+double Analisiskeamananruang(double Analisiskeamananruang){
     int j=0;
     if (j==1){
-        System.out.println("TIDAK SESUAI");
+        System.out.println("Tidak Sesuai");
     }
     if (j==2){
-        System.out.println("SESUAI");
+        System.out.println("Sesuai");
     }
-    return bahaya;
+    return Analisiskeamananruang;
 }
 
-
 @Override
-public String Kebisingan(){
+public String kebisingan(){
 int c = 0;
 if(c==1){
 System.out.println("TIDAK SESUAI");
@@ -318,7 +408,8 @@ System.out.println("SESUAI");
 }
 return kebisingan;
 }
-public String Bau(){
+@Override
+public String bau(){
 int d=0;
 if (d==1){
 System.out.println("TIDAK SESUAI");
@@ -328,7 +419,8 @@ System.out.println("SESUAI");
 }
 return bau;
 }
-public String Kebocoran(){
+@Override
+public String kebocoran(){
 int e=0;
 if (e==1){
 System.out.println("TIDAK SESUAI");
@@ -338,7 +430,8 @@ System.out.println("SESUAI");
 }
 return kebocoran;
 }
-public String Kerusakan(){
+@Override
+public String kerusakan(){
 int f=0;
 if (f==1){
 System.out.println("TIDAK SESUAI");
@@ -348,7 +441,8 @@ System.out.println("SESUAI");
 }
 return kerusakan;
 }
-public String Keausan(){
+@Override
+public String keausan(){
 int g=0;
 if (g==1){
 System.out.println("TIDAK SESUAI");
@@ -357,15 +451,5 @@ if (g==2){
 System.out.println("SESUAI");
 }
 return keausan;
-}
-public String Kekokohan(){
-int h=0;
-if (h==1){
-System.out.println("TIDAK SESUAI");
-}
-if (h==2){
-System.out.println("SESUAI");
-}
-return kekokohan;
 }
 } 
