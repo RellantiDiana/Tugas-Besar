@@ -14,7 +14,7 @@ public String kebisingan ();
 public String bau();
 public String kebocoran();
 public String kerusakan();
-public String Keausan();
+public String keausan();
 
 }
 
