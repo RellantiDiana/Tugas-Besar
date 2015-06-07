@@ -1,3 +1,17 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package TB;
+
+/**
+ *
+ * @author flora fauna
+ */
+
+//package com.example.bkma;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,15 +31,16 @@ public class OperasiDatabase {
         private final String insertkenyamanan_ruangkelas = "INSERT INTO kenyamanan_ruangkelas (kebisingan,bau,kebocoran,kerusakan,keausan) VALUES kebisingan,bau,kebocoran,kerusakan,keausan);";
         private final String insertkeamanan_ruangkelas = "INSERT INTO keamanan_ruangkelas (kekokohan,kuncipintudanjendela,bahaya) VALUES (kekokohan,kuncipintudanjendela,bahaya);";
         
-	private final String selectidentitas_ruangkelas = "SELECT lokasiruang,fakultas FROM identitas_ruangkelas WHERE identitas_ruangkelas LIKE namaruang";
-        private final String selectkondisi_ruangkelas = "SELECT lebar,jumlahkursi,jumlahpintu,jumlahjendela,rasio FROM kondisi_ruangkelas WHERE kondisi_ruangkelas LIKE panjang";
-        private final String selectjumlah_kondisi_dan_posisisarana = "SELECT kondisistopkontak,posisistopkontak,jumlahkabellcd,kondisikabellcd,posisikabellcd,jumlahlampu,kondisilampu,posisilampu,jumlahkipasangin,kondisikipasangin,posisikipasangin,jumlahAC,kondisiAC,posisiAC,pilihSSID,bandwidth,jumlahCCTV,kondisiCCTV,posisiCCTV) VALUES (jumlahstopkontak,kondisistopkontak,posisistopkontak,jumlahkabellcd,kondisikabellcd,posisikabellcd,jumlahlampu,kondisilampu,posisilampu,jumlahkipasangin,kondisikipasangin,posisikipasangin,jumlahAC,kondisiAC,posisiAC,pilihSSID,bandwidth,jumlahCCTV,kondisiCCTV,posisiCCTV FROM jumlah_kondisi_dan_posisisarana WHERE jumlah_kondisi_dan_posisisarana LIKE jumlahstopkontak";
-	private final String selectlingkungan_ruangkelas = "SELECT kondisidinding,kondisiatap,kondisipintu,kondisijendela FROM lingkungan_ruangkelas WHERE lingkungan_ruangkelas LIKE kondisilantai";
-        private final String selectkebersihan_ruangkelas = "SELECT pencahayaan,kelembapan,suhu FROM kebersihan_ruangkelas WHERE kebersihan_ruangkelas LIKE inputsirkulasiudara";
-        private final String selectkenyamanan_ruangkelas  = "SELECT bau,kebocoran,kerusakan,keausan FROM kenyamanan_ruangkelas WHERE kenyamanan_ruangkelas LIKE kebisingan";
-        private final String selectkeamanan_ruangkelas = "SELECT kuncipintudanjendela,bahaya FROM keamanan_ruangkelas WHERE keamanan_ruangkelas LIKE kekokohan";
+        private final String updateidentitas_ruangkelas = "UPDATE lokasiruang,fakultas FROM identitas_ruangkelas WHERE identitas_ruangkelas LIKE namaruang";
+        private final String updatekondisi_ruangkelas = "UPDATE lebar,jumlahkursi,jumlahpintu,jumlahjendela,rasio FROM kondisi_ruangkelas WHERE kondisi_ruangkelas LIKE panjang";
+        private final String updatejumlah_kondisi_dan_posisisarana = "UPDATE kondisistopkontak,posisistopkontak,jumlahkabellcd,kondisikabellcd,posisikabellcd,jumlahlampu,kondisilampu,posisilampu,jumlahkipasangin,kondisikipasangin,posisikipasangin,jumlahAC,kondisiAC,posisiAC,pilihSSID,bandwidth,jumlahCCTV,kondisiCCTV,posisiCCTV) VALUES (jumlahstopkontak,kondisistopkontak,posisistopkontak,jumlahkabellcd,kondisikabellcd,posisikabellcd,jumlahlampu,kondisilampu,posisilampu,jumlahkipasangin,kondisikipasangin,posisikipasangin,jumlahAC,kondisiAC,posisiAC,pilihSSID,bandwidth,jumlahCCTV,kondisiCCTV,posisiCCTV FROM jumlah_kondisi_dan_posisisarana WHERE jumlah_kondisi_dan_posisisarana LIKE jumlahstopkontak";
+	private final String updatelingkungan_ruangkelas = "UPDATE kondisidinding,kondisiatap,kondisipintu,kondisijendela FROM lingkungan_ruangkelas WHERE lingkungan_ruangkelas LIKE kondisilantai";
+        private final String updatekebersihan_ruangkelas = "UPDATE pencahayaan,kelembapan,suhu FROM kebersihan_ruangkelas WHERE kebersihan_ruangkelas LIKE inputsirkulasiudara";
+        private final String updatekenyamanan_ruangkelas  = "UPDATE bau,kebocoran,kerusakan,keausan FROM kenyamanan_ruangkelas WHERE kenyamanan_ruangkelas LIKE kebisingan";
+        private final String updatekeamanan_ruangkelas = "UPDATE kuncipintudanjendela,bahaya FROM keamanan_ruangkelas WHERE keamanan_ruangkelas LIKE kekokohan";
         
-	private final String deleteidentitas_ruangkelas = "DELETE lokasiruang,fakultas FROM identitas_ruangkelas WHERE identitas_ruangkelas LIKE namaruang";
+        
+        private final String deleteidentitas_ruangkelas = "DELETE lokasiruang,fakultas FROM identitas_ruangkelas WHERE identitas_ruangkelas LIKE namaruang";
         private final String deletekondisi_ruangkelas = "DELETE lebar,jumlahkursi,jumlahpintu,jumlahjendela,rasio FROM kondisi_ruangkelas WHERE kondisi_ruangkelas LIKE panjang";
         private final String deletejumlah_kondisi_dan_posisisarana = "DELETE kondisistopkontak,posisistopkontak,jumlahkabellcd,kondisikabellcd,posisikabellcd,jumlahlampu,kondisilampu,posisilampu,jumlahkipasangin,kondisikipasangin,posisikipasangin,jumlahAC,kondisiAC,posisiAC,pilihSSID,bandwidth,jumlahCCTV,kondisiCCTV,posisiCCTV) VALUES (jumlahstopkontak,kondisistopkontak,posisistopkontak,jumlahkabellcd,kondisikabellcd,posisikabellcd,jumlahlampu,kondisilampu,posisilampu,jumlahkipasangin,kondisikipasangin,posisikipasangin,jumlahAC,kondisiAC,posisiAC,pilihSSID,bandwidth,jumlahCCTV,kondisiCCTV,posisiCCTV FROM jumlah_kondisi_dan_posisisarana WHERE jumlah_kondisi_dan_posisisarana LIKE jumlahstopkontak";
 	private final String deletelingkungan_ruangkelas = "DELETE kondisidinding,kondisiatap,kondisipintu,kondisijendela FROM lingkungan_ruangkelas WHERE lingkungan_ruangkelas LIKE kondisilantai";
@@ -33,4 +48,50 @@ public class OperasiDatabase {
         private final String deletekenyamanan_ruangkelas  = "DELETE bau,kebocoran,kerusakan,keausan FROM kenyamanan_ruangkelas WHERE kenyamanan_ruangkelas LIKE kebisingan";
         private final String deletekeamanan_ruangkelas = "DELETE kuncipintudanjendela,bahaya FROM keamanan_ruangkelas WHERE keamanan_ruangkelas LIKE kekokohan";
        
-	}
+	
+//	public OperasiDatabase(){
+//		connection = Database2.connection();
+//	}
+//	
+//	public void getProdi(String prodi) {
+//	    try {
+//		    PreparedStatement st = connection.prepareStatement(selectProdi);
+//	        st.setString(1, "%"+prodi+"%");
+//	        ResultSet rs = st.executeQuery();
+//	        //System.out.println(st);
+//	        while (rs.next()) {
+//		       	this.id_prodi = Integer.parseInt(rs.getString("id_prodi"));
+//		       	this.id_fk = Integer.parseInt(rs.getString("id_fk"));
+//		       	//System.out.println("prodi "+rs.getString("prodi"));
+//	        }
+//	    } catch (SQLException ex) {
+//	    	Logger.getLogger(OperasiDatabase.class.getName()).log(Level.SEVERE, null, ex);
+//	    }
+//		//return ks;
+//		//return ks;
+//	}
+//	
+//	public void setDosen(Dosen ds) {
+//		PreparedStatement statement = null;
+//		try {
+//			statement = connection.prepareStatement(insertDosen, Statement.RETURN_GENERATED_KEYS);
+//			statement.setString(1, ds.getNama());
+//			statement.setString(2, null);
+//			statement.setInt(3, id_fk);
+//			statement.setInt(4, id_prodi);
+//			statement.executeUpdate();
+//			System.out.println("data Berhasil Ditambah");
+//        } catch (SQLException ex) {
+//            ex.printStackTrace();
+//            System.out.println("data Gagal Ditambah");
+//        } finally {
+//            try {
+//                statement.close();
+//            } catch (SQLException ex) {
+//                ex.printStackTrace();
+//            }
+//       }
+//	}
+}
+
+   
