@@ -2,41 +2,41 @@
 package TB;
 
 import java.util.Scanner;
-abstract public class ControlInput extends RuangKelas implements Interfes {
-
-    public ControlInput(String namaruang, String lokasiruang, String fakultas, String prodi,int panjang, int lebar, int jumlahkursi, int jumlahpintu, int jumlahjendela, int luas, int rasio, int bentuk, int jumlahstopkontak, String kondisistopkontak, String posisistopkontak, int jumlahkabellcd, String kondisikabellcd, String posisikabellcd, int jumlahlampu, String kondisilampu, String posisilampu, int jumlahkipasangin, String kondisikipasangin, String posisikipasangin, int jumlahAC, String kondisiAC, String posisiAC, String pilihSSID, int bandwidth, int jumlahCCTV, String kondisiCCTV, String posisiCCTV, String kondisilantai, String kondisidinding, String kondisiatap, String kondisipintu, String kondisijendela, String sirkulasiudara, int pencahayaan, int kelembapan, int suhu, String kebisingan, String bau, String kebocoran, String kerusakan, String keausan, String kekokohan, String kuncipintudanjendela, String bahaya) {
-        super(namaruang, lokasiruang, fakultas, panjang, lebar, jumlahkursi, jumlahpintu, jumlahjendela, luas, rasio, bentuk, jumlahstopkontak, kondisistopkontak, posisistopkontak, jumlahkabellcd, kondisikabellcd, posisikabellcd, jumlahlampu, kondisilampu, posisilampu, jumlahkipasangin, kondisikipasangin, posisikipasangin, jumlahAC, kondisiAC, posisiAC, pilihSSID, bandwidth, jumlahCCTV, kondisiCCTV, posisiCCTV, kondisilantai, kondisidinding, kondisiatap, kondisipintu, kondisijendela, sirkulasiudara, pencahayaan, kelembapan, suhu, kebisingan, bau, kebocoran, kerusakan, keausan, kekokohan, kuncipintudanjendela, bahaya);
-    }
+public class ControlInput extends RuangKelas implements Interfes {
+//
+//    public ControlInput(String namaruang, String lokasiruang, String fakultas, String prodi,int panjang, int lebar, int jumlahkursi, int jumlahpintu, int jumlahjendela, int luas, int rasio, int bentuk, int jumlahstopkontak, String kondisistopkontak, String posisistopkontak, int jumlahkabellcd, String kondisikabellcd, String posisikabellcd, int jumlahlampu, String kondisilampu, String posisilampu, int jumlahkipasangin, String kondisikipasangin, String posisikipasangin, int jumlahAC, String kondisiAC, String posisiAC, String pilihSSID, int bandwidth, int jumlahCCTV, String kondisiCCTV, String posisiCCTV, String kondisilantai, String kondisidinding, String kondisiatap, String kondisipintu, String kondisijendela, String sirkulasiudara, int pencahayaan, int kelembapan, int suhu, String kebisingan, String bau, String kebocoran, String kerusakan, String keausan, String kekokohan, String kuncipintudanjendela, String bahaya) {
+//        super(namaruang, lokasiruang, fakultas, panjang, lebar, jumlahkursi, jumlahpintu, jumlahjendela, luas, rasio, bentuk, jumlahstopkontak, kondisistopkontak, posisistopkontak, jumlahkabellcd, kondisikabellcd, posisikabellcd, jumlahlampu, kondisilampu, posisilampu, jumlahkipasangin, kondisikipasangin, posisikipasangin, jumlahAC, kondisiAC, posisiAC, pilihSSID, bandwidth, jumlahCCTV, kondisiCCTV, posisiCCTV, kondisilantai, kondisidinding, kondisiatap, kondisipintu, kondisijendela, sirkulasiudara, pencahayaan, kelembapan, suhu, kebisingan, bau, kebocoran, kerusakan, keausan, kekokohan, kuncipintudanjendela, bahaya);
+//    }
 
     
-double hitungluas(int panjang , int lebar, int luas){
+double hitungluas(int panjang , int lebar){
 luas=panjang*lebar;
 return luas;
 }
 
-double hitungrasio(int rasio, int luas , int jumlahkursi){
+double hitungrasio(int luas , int jumlahkursi){
 rasio= luas/jumlahkursi;
 return rasio;
 }
 
-double hitungbentukruang(int panjang , int luas, double hitungbentukruang){
-if(panjang != luas){
-System.out.println("persegi panjang");
-System.out.println("SESUAI");
-}else{
-System.out.println("TIDAK SESUAI");
-}
-return hitungbentukruang;
-}
+//double hitungbentukruang(){
+//if(panjang != luas){
+//System.out.println("persegi panjang");
+//System.out.println("SESUAI");
+//}else{
+//System.out.println("TIDAK SESUAI");
+//}
+//return hitungbentukruang;
+//}
 
-double hitungrasioluas(int rasio, double hitungrasioLuas){
-if (rasio>=2){
-System.out.println("SESUAI");
-}else{
-System.out.println("TIDAK SESUAI");
-}
-return hitungrasioLuas;
-}
+//double hitungrasioluas(int rasio, double hitungrasioLuas){
+//if (rasio>=2){
+//System.out.println("SESUAI");
+//}else{
+//System.out.println("TIDAK SESUAI");
+//}
+//return hitungrasioLuas;
+//}
 
 double Analisisjumlahpintu(int jumlahpintu, double Analisisjumlahpintu){
 if (jumlahpintu>=2){
@@ -452,4 +452,9 @@ System.out.println("SESUAI");
 }
 return keausan;
 }
+
+    @Override
+    public void Cetak() {
+        
+    }
 } 
